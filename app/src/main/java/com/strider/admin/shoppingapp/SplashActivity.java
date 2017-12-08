@@ -1,6 +1,7 @@
 package com.strider.admin.shoppingapp;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -110,7 +111,16 @@ public class SplashActivity extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-
+                    if(App.isLoggedIn(SplashActivity.this, App.LOGIN))
+                    {
+                        Intent intent =  new Intent(SplashActivity.this , MainActivity.class );
+                        startActivity(intent);
+                    }
+                    else
+                    {
+                        Intent intent =  new Intent(SplashActivity.this , LoginActivity.class );
+                        startActivity(intent);
+                    }
             }
         },4000);
     }

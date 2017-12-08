@@ -38,10 +38,10 @@ public class App {
         editor.commit();
     }
 
-    protected  static void isLoggedIn(Context context , String key)
+    protected  static boolean isLoggedIn(Context context , String key)
     {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
-        sharedPreferences.getBoolean(key , false);
+         return sharedPreferences.getBoolean(key , false);
     }
 
 }
