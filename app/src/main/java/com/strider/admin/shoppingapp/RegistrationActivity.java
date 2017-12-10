@@ -46,6 +46,7 @@ public class RegistrationActivity extends AppCompatActivity {
 
     public void onRegister(View view)
     {
+        Log.i(TAG,"Registeration activity started");
         HashMap<String,String> payloads = new HashMap<String,String>();
         payloads.put("username",username.getText().toString());
         payloads.put("password",password.getText().toString());
