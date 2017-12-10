@@ -12,6 +12,7 @@ import android.widget.Toast;
 public class App {
 
     public static final String LOGIN = "login";
+    public static final String SERVICE_URL = "http://vasudevkumaran.com/app/registration";
 
     public static void showToast(Context context ,String message)
     {
